@@ -24,6 +24,7 @@ after_seccess:
 
 deploy:
   provider: elasticbeanstalk
+  edge: true
   region: "ap-northeast-2"
   app: "docker-fullstack-app"
   env: "Docker-fullstack-app-env"
