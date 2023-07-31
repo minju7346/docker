@@ -14,7 +14,7 @@ script:
 after_seccess:
   - docker build -t minju7346/docker-frontend ./frontend
   - docker build -t minju7346/docker-backend ./backend
-  - docker build 0t minju7346/docker-nginx ./nginx
+  - docker build -t minju7346/docker-nginx ./nginx
   
   - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
 
