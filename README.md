@@ -76,19 +76,31 @@ Nginx의 프록시 기능을 이용하여 URL에 따라 프론트엔드로 보�
 
 ### 프로젝트 진행 과정
 
-1. 전체 소스 코드 작성 (NodeJS, React)
+1. 전체 소스 코드 작성 (NodeJS, React) 
+<br/>
+
 2. Dockerfile 작성
    - 개발환경은 Dockerfile.dev로 운영환경은 Dockerfile로 구분하였다.
-   - Frontend, Backend, Nginx, Mysql에 대한 도커 이미지로 생성할 서비스들에 대해 작성하였다.
-3. Docker-compose를 작성하여 컨테이너들을 연동한다.
-4. Github에 Push
+   - Frontend, Backend, Nginx, Mysql에 대한 도커 이미지로 생성할 서비스들에 대해 작성하였다. <br/>
+<br/>
+
+3. Docker-compose를 작성하여 컨테이너들을 연동한다. <br/>
+<br/>
+
+4. Github에 Push <br/>
+<br/>
+
 5. Travis CI
-   - 테스트 코드 실행 후 성공시 각각의 Dockerfile을 이용하여 도커 이미지를 빌드하고 Docker Hub로 전달한다.
+   - 테스트 코드 실행 후 성공시 각각의 Dockerfile을 이용하여 도커 이미지를 빌드하고 Docker Hub로 전달한다. 
+<br/>
+
 6. Docker Hub
    - Travis CI에서 빌드된 이미지를 보관한다.
-   - AWS의 Elastic Beanstalk에서 요청할떄 이미지를 전달한다.
+   - AWS의 Elastic Beanstalk에서 요청할떄 이미지를 전달한다. <br/>
+<br/>
+
 7. AWS Elastic Beanstalk에서 Travis로부터 빌드된 이미지를 이용해서 도커환경을 클라우드에 배포한다.
-   - 도커허브에서 빌드된 이미지를 가져오기때문에  EB에서는 빌드과정 없이 진행된다.
+   - 도커허브에서 빌드된 이미지를 가져오기때문에  EB에서는 빌드과정 없이 진행된다. <br/>
 
 <br><br><br><br><br><br><br>
 <a name="5"></a>
